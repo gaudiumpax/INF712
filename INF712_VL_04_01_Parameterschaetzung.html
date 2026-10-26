@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-10">
 
 <title>INF712 - Computerunterstützte Statistik – INF712 – Computerunterstützte Statistik</title>
 <style>
@@ -69,8 +68,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./INF712_VL_04_02_Konfidenzintervalle.html" rel="next">
-<link href="./INF712_VL_03_01_Monte_Carlo_Simulationen.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -181,9 +178,6 @@ window.Quarto = {
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./INF712_VL_01_01_Die_Programmierungssprache_R.html">Vorlesungen</a></li><li class="breadcrumb-item"><a href="./INF712_VL_04_01_Parameterschaetzung.html">4.1: Parameterschätzung</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
@@ -191,11 +185,6 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Suchen"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -222,7 +211,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./INF712_VL_01_02_Grundlagen_von_R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.2: Grundlagen von Rfsdfds</span></a>
+ <span class="menu-text">1.2: Grundlagen von R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,7 +246,7 @@ window.Quarto = {
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#vorlesung-04-parameterschätzung" id="toc-vorlesung-04-parameterschätzung" class="nav-link active" data-scroll-target="#vorlesung-04-parameterschätzung"><span class="header-section-number">1</span> <span style="color: red">Vorlesung 04: Parameterschätzung</span></a>
+  <li><a href="#vorlesung-04-01-parameterschätzung" id="toc-vorlesung-04-01-parameterschätzung" class="nav-link active" data-scroll-target="#vorlesung-04-01-parameterschätzung"><span class="header-section-number">1</span> <span style="color: red">Vorlesung 04-01: Parameterschätzung</span></a>
   <ul>
   <li><a href="#von-der-stichprobe-zur-population" id="toc-von-der-stichprobe-zur-population" class="nav-link" data-scroll-target="#von-der-stichprobe-zur-population"><span class="header-section-number">1.1</span> <span style="color: green"><strong>Von der Stichprobe zur Population</strong></span></a></li>
   <li><a href="#momentenmethode" id="toc-momentenmethode" class="nav-link" data-scroll-target="#momentenmethode"><span class="header-section-number">1.2</span> <span style="color: green"><strong>Momentenmethode</strong></span></a></li>
@@ -290,7 +279,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">11/10/2026</p>
+      <p class="date">26/10/2026</p>
     </div>
   </div>
   
@@ -302,8 +291,8 @@ window.Quarto = {
 </header>
 
 
-<section id="vorlesung-04-parameterschätzung" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> <span style="color: red">Vorlesung 04: Parameterschätzung</span></h1>
+<section id="vorlesung-04-01-parameterschätzung" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> <span style="color: red">Vorlesung 04-01: Parameterschätzung</span></h1>
 <p>Momentenmethode, Maximum-Likelihood-Methode, Standardfehler von Schätzern (Baron, §9.1).</p>
 <p><strong>Lernziele</strong></p>
 <p>Nach dieser Vorlesung können Sie</p>
@@ -1914,19 +1903,7 @@ E(\hat\lambda) = \frac{n\lambda}{n-1}, \qquad
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./INF712_VL_03_01_Monte_Carlo_Simulationen.html" class="pagination-link" aria-label="3.1: Monte-Carlo Simulationen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3.1: Monte-Carlo Simulationen</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./INF712_VL_04_02_Konfidenzintervalle.html" class="pagination-link" aria-label="4.2: Konfidenzintervalle">
-        <span class="nav-page-text">4.2: Konfidenzintervalle</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Quellcode</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Quellcode</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "INF712 - Computerunterstützte Statistik"</span></span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "26-27 WS"</span></span>
@@ -1973,7 +1950,7 @@ E(\hat\lambda) = \frac{n\lambda}{n-1}, \qquad
 <span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a><span class="co">  - text-color.lua</span></span>
 <span id="cb34-45"><a href="#cb34-45" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb34-46"><a href="#cb34-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a><span class="fu"># [Vorlesung 04: Parameterschätzung]{style="color: red"}</span></span>
+<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a><span class="fu"># [Vorlesung 04-01: Parameterschätzung]{style="color: red"}</span></span>
 <span id="cb34-48"><a href="#cb34-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-49"><a href="#cb34-49" aria-hidden="true" tabindex="-1"></a>Momentenmethode, Maximum-Likelihood-Methode, Standardfehler von</span>
 <span id="cb34-50"><a href="#cb34-50" aria-hidden="true" tabindex="-1"></a>Schätzern (Baron, §9.1).</span>
